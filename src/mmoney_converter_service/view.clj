@@ -41,13 +41,6 @@
         [:div.form-group
          [:button.btn.btn-primary "Convert"]]]]]]))
 
-(comment
-  [:div.line "Starting Conversion"]
-  [:div.line "XML valid"]
-  [:div.line.error "Missing category `BlaBal`"]
-  [:div.line.error "Missing category `Fu fu fu"]
-  [:div.line "Conversion completed in xx ms"])
-
 (defn display-messages [logs]
   [:div.console
    (for [{:keys [level message err]} logs
