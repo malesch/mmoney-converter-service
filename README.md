@@ -12,9 +12,9 @@ Basic web frontend for the mMoneyConverter
 
 2) Build Docker image:
    
-   `> docker build .`
+   `> docker build --tag mmoney-service .`
    
 3) Create and start container, e.g.:
 
-   `> docker run -p3000:3000 -it <image>`
+   `> docker run -p3000:3000 -it mmoney-service`
    
