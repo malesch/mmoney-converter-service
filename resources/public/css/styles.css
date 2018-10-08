@@ -1,0 +1,43 @@
+.container{
+    margin-top:20px;
+}
+
+.file-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.file-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.file-input-title {
+    margin-left: 1em;
+
+}
+
+div.console {
+    background-color: #EFEFEF;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+div.console div.line {
+    font-size: 80%;
+    line-height: 1.4;
+}
+
+span.error {
+    color: red;
+}
+
