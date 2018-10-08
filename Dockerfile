@@ -6,4 +6,4 @@ ADD resources/config/* /mmoney-converter-service/
 
 EXPOSE 3000
 
-CMD ["java", "-Dmmoney.config=/mmoney-converter-service/config.edn" "-jar", "/mmoney-converter-service/app.jar"]
+CMD ["java", "-Dmmoney.config=/mmoney-converter-service/config.edn", "-jar", "/mmoney-converter-service/app.jar"]
