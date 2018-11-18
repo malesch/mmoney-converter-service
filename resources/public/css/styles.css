@@ -41,3 +41,10 @@ span.error {
     color: red;
 }
 
+div.version {
+    margin-top: 2em;
+    font-family: Courier;
+    font-size: x-small;
+    color: lightgrey;
+}
+

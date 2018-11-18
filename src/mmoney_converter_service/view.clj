@@ -1,7 +1,8 @@
 (ns mmoney-converter-service.view
   (:use [hiccup core page])
   (:require [clojure.string :as string]
-            [ring.util.response :as resp])
+            [ring.util.response :as resp]
+            [mmoney-converter-service.version :refer [version]])
   (:import (java.io ByteArrayInputStream)))
 
 (defn base [content]
@@ -19,7 +20,7 @@
      (include-js "/js/bootstrap.min.js")
      (include-js "/js/upload.js")]))
 
-(defn upload-page []
+(defn upload-page [config]
   (base
     [:div
      [:div.row
@@ -39,7 +40,13 @@
             [:input#fileUpload.form-control {:type "file" :name "upload-file"
                                              :accept "application/xml, text/xml"}]]]]]
         [:div.form-group
-         [:button.btn.btn-primary "Convert"]]]]]]))
+         [:button.btn.btn-primary "Convert"]]]]]
+     [:div.row.version
+      [:div.col-xs-12.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+       [:div.pull-right
+        [:div {:title (str "Service version: " version)} (str "S: " version)]
+        (when-let [cfg-version (:version config)]
+          [:div {:title (str "Configuration version: " cfg-version)} (str "C: " cfg-version)])]]]]))
 
 (defn display-messages [logs]
   [:div.console

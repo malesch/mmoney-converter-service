@@ -14,7 +14,7 @@
   (reset! config (read-configuration (env :mmoney-config "config.edn"))))
 
 (defroutes routes
-  (GET "/" [] (v/upload-page))
+  (GET "/" [] (v/upload-page @config))
   (POST "/upload" {params :params}
     (let [result (m/convert-mmoney-xml @config params)]
       (if (= (:status result) :success)
