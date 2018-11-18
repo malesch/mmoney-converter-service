@@ -9,7 +9,7 @@
                  [hiccup "1.0.5"]
                  [environ "1.1.0"]
                  ;;
-                 [mmoney-converter "0.2.0"]]
+                 [mmoney-converter "0.3.0"]]
   :ring {:handler mmoney-converter-service.core/app
          :init mmoney-converter-service.core/init
          :uberwar-name "mmoney-converter-service.war"}
