@@ -1,4 +1,4 @@
-(defproject mmoney-converter-service "0.1.0"
+(defproject mmoney-converter-service "1.1"
   :description "Simple web frontend to the mmoney-converter"
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [ring/ring-core "1.7.0"]
